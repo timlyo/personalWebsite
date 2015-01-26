@@ -16,3 +16,34 @@ body{
     margin:auto;
     width: 60%;
 }
+
+.project{
+    float: left;
+    margin: 30px;
+}
+
+.project p, h2{ 
+    max-width: 160px;
+}
+
+.project img{
+    max-width: 160px;
+    
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    
+    -webkit-transition: 2s -webkit-filter;
+    transition: 0.5s;
+    
+}
+
+img:hover{
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+}
