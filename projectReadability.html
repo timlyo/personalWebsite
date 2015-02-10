@@ -4,6 +4,14 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <LINK href="style.css" rel="stylesheet" type="text/css">
+        
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="ProjectReadability.js"></script>
+        
+        <script>
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(createChart);
+    </script>
 </head>
 
 <body>
@@ -33,10 +41,14 @@
             <div class="container">
                 <h1>Readability</h1>
                 <p>This is a project for my university coursework. It involves reddit, user comments and their readability score. Maybe even a pretty graph.</p>
+                
+                <button type="button" class="btn-default">Defaults</button>
+                <button type="button" class="btn-default">Top 10</button>
+                
+                <div id="chart" style="width: 100%; height: 900px;">Loading</div>
             </div>
         </div>
-    </div>
-    
+    </div>    
 </body>
     
     

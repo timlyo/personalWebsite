@@ -9,12 +9,6 @@ body{
     margin: 0;
     padding: 0;
 	color: #333;
-	height: 100%;
-}
-
-#body{
-    margin:auto;
-    width: 60%;
 }
 
 .project{
@@ -37,7 +31,6 @@ body{
     
     -webkit-transition: 2s -webkit-filter;
     transition: 0.5s;
-    
 }
 
 img:hover{
