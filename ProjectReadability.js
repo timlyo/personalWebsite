@@ -22,7 +22,7 @@ function createChart(){
 }
 
 function draw(){
-    rawData = [['readability', 'score'],];
+    rawData = [['readability', 'score'],[0,0]];
     for(var i = 0; i < subredditList.length; i++){
         if(document.getElementById(subredditList[i]).checked){
             console.log("showing " + subredditList[i])
