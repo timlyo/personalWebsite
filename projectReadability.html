@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 
+ <meta charset="UTF-8"> 
+
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <LINK href="style.css" rel="stylesheet" type="text/css">
         
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="projectReadabilityData.js"></script>
     <script type="text/javascript" src="ProjectReadability.js"></script>
         
         <script>
@@ -39,13 +42,79 @@
     <div id="body">
         <div class="jumbotron">
             <div class="container">
-                <h1>Readability</h1>
-                <p>This is a project for my university coursework. It involves reddit, user comments and their readability score. Maybe even a pretty graph.</p>
-                
-                <button type="button" class="btn-default">Defaults</button>
-                <button type="button" class="btn-default">Top 10</button>
+                <h1>Reddit Readability</h1>
+                <p>A graph correlating a reddit comment's score with it's readability value</p>
                 
                 <div id="chart" style="width: 100%; height: 900px;">Loading</div>
+                
+                
+                <button class=".btn-default" onclick="draw()">Redraw</button> Click this after selecting the subreddits below
+                
+                <br>
+                
+                <button class=".btn-default" onclick="selectDefaults()">Defaults</button>
+                <button class=".btn-default">10 Most Subscribed</button>
+                <button class=".btn-default">Writing Subreddits</button>
+                
+                <br>
+                <br>
+                
+                <label><input type="checkbox" name="announcements" id="announcements" value="value">announcements</label>
+                <label><input type="checkbox" name="art" id="art" value="value">art</label>
+                <label><input type="checkbox" name="askscience" id="askscience" value="value">askscience</label>
+                <label><input type="checkbox" name="askreddit" id="askreddit" value="value">askreddit</label>
+                <label><input type="checkbox" name="aww" id="aww" value="value">aww</label>
+                <label><input type="checkbox" name="blog" id="blog" value="value">blog</label>
+                <label><input type="checkbox" name="books" id="books" value="value">books</label>
+                <label><input type="checkbox" name="creepy" id="creepy" value="value">creepy</label>
+                <label><input type="checkbox" name="dataisbeautiful" id="dataisbeautiful" value="value">dataisbeautiful</label>
+                <label><input type="checkbox" name="diy" id="diy" value="value">diy</label>
+                <label><input type="checkbox" name="documentaries" id="documentaries" value="value">documentaries</label>
+                <label><input type="checkbox" name="earthporn" id="earthporn" value="value">earthporn</label>
+                <label><input type="checkbox" name="explainlikeimfive" id="explainlikeimfive" value="value">explainlikeimfive</label>
+                <label><input type="checkbox" name="fitness" id="fitness" value="value">fitness</label>
+                <label><input type="checkbox" name="food" id="food" value="value">food</label>
+                <label><input type="checkbox" name="funny" id="funny" value="value">funny</label>
+                <label><input type="checkbox" name="futurology" id="futurology" value="value">futurology</label>
+                <label><input type="checkbox" name="gadgets" id="gadgets" value="value">gadgets</label>
+                <label><input type="checkbox" name="gaming" id="gaming" value="value">gaming</label>
+                <label><input type="checkbox" name="getmotivated" id="getmotivated" value="value">getmotivated</label>
+                <label><input type="checkbox" name="gifs" id="gifs" value="value">gifs</label>
+                <label><input type="checkbox" name="history" id="history" value="value">history</label>
+                <label><input type="checkbox" name="iama" id="iama" value="value">iama</label>
+                <label><input type="checkbox" name="internetisbeautiful" id="internetisbeautiful" value="value">internetisbeautiful</label>
+                <label><input type="checkbox" name="jokes" id="jokes" value="value">jokes</label>
+                <label><input type="checkbox" name="lifeprotips" id="lifeprotips" value="value">lifeprotips</label>
+                <label><input type="checkbox" name="listentothis" id="listentothis" value="value">listentothis</label>
+                <label><input type="checkbox" name="mildlyinteresting" id="mildlyinteresting" value="value">mildlyinteresting</label>
+                <label><input type="checkbox" name="movies" id="movies" value="value">movies</label>
+                <label><input type="checkbox" name="music" id="music" value="value">music</label>
+                <label><input type="checkbox" name="news" id="news" value="value">news</label>
+                <label><input type="checkbox" name="nosleep" id="nosleep" value="value">nosleep</label>
+                <label><input type="checkbox" name="nottheonion" id="nottheonion" value="value">nottheonion</label>
+                <label><input type="checkbox" name="oldschoolcool" id="oldschoolcool" value="value">oldschoolcool</label>
+                <label><input type="checkbox" name="personalfinance" id="personalfinance" value="value">personalfinance</label>
+                <label><input type="checkbox" name="philosophy" id="philosophy" value="value">philosophy</label>
+                <label><input type="checkbox" name="photoshopbattles" id="photoshopbattles" value="value">photoshopbattles</label>
+                <label><input type="checkbox" name="pics" id="pics" value="value">pics</label>
+                <label><input type="checkbox" name="science" id="science" value="value">science</label>
+                <label><input type="checkbox" name="showerthoughts" id="showerthoughts" value="value">showerthoughts</label>
+                <label><input type="checkbox" name="space" id="space" value="value">space</label>
+                <label><input type="checkbox" name="sports" id="sports" value="value">sports</label>
+                <label><input type="checkbox" name="television" id="television" value="value">television</label>
+                <label><input type="checkbox" name="tifu" id="tifu" value="value">tifu</label>
+                <label><input type="checkbox" name="todayilearned" id="todayilearned" value="value">todayilearned</label>
+                <label><input type="checkbox" name="twoxchromosomes" id="twoxchromosomes" value="value">twoxchromosomes</label>
+                <label><input type="checkbox" name="upliftingnews" id="upliftingnews" value="value">upliftingnews</label>
+                <label><input type="checkbox" name="videos" id="videos" value="value">videos</label>
+                <label><input type="checkbox" name="worldnews" id="worldnews" value="value">worldnews</label>
+                <label><input type="checkbox" name="writingprompts" id="writingprompts" value="value">writingprompts</label>
+                <label><input type="checkbox" name="writing" id="writing" value="value">writing</label>
+                <label><input type="checkbox" name="science" id="science" value="value">science</label>
+                <label><input type="checkbox" name="showerthoughts" id="showerthoughts" value="value">showerthoughts</label>
+                <label><input type="checkbox" name="space" id="space" value="value">space</label>
+                <label><input type="checkbox" name="sports" id="sports" value="value">sports</label>
+                <label><input type="checkbox" name="television" id="television" value="value">television</label>
             </div>
         </div>
     </div>    
