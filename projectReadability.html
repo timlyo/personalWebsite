@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <LINK href="style.css" rel="stylesheet" type="text/css">
         
+    <meta charset="UTF-8">
+    <meta name="description" content="timlyo personal site">
+    <meta name="keywords" content="personal, projects, programming">
+    <meta name="author" content="Tim Maddison">
+        
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="projectReadabilityData.js"></script>
     <script type="text/javascript" src="ProjectReadability.js"></script>
         
-        <script>
+    <script>
         google.load("visualization", "1", {packages:["corechart"]});
         google.setOnLoadCallback(createChart);
     </script>
@@ -43,18 +48,23 @@
         <div class="jumbotron">
             <div class="container">
                 <h1>Reddit Readability</h1>
-                <p>A graph correlating a reddit comment's score with it's readability value</p>
+                <p>A graph correlating a reddit comment's score with it's <a href="http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests">Flesch–Kincaid</a> readability value, higher is easier to understand. Full <a href="projectReadabilityWriteup.html">write up is here</a>.</p>
+                
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- timlyo.io -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-8246380108716470"
+                     data-ad-slot="2804367147"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
                 
                 <div id="chart" style="width: 100%; height: 900px;">Loading</div>
                 
                 
                 <button class=".btn-default" onclick="draw()">Redraw</button> Click this after selecting the subreddits below
-                
-                <br>
-                
-                <button class=".btn-default" onclick="selectDefaults()">Defaults</button>
-                <button class=".btn-default">10 Most Subscribed</button>
-                <button class=".btn-default">Writing Subreddits</button>
                 
                 <br>
                 <br>
@@ -109,12 +119,6 @@
                 <label><input type="checkbox" name="videos" id="videos" value="value">videos</label>
                 <label><input type="checkbox" name="worldnews" id="worldnews" value="value">worldnews</label>
                 <label><input type="checkbox" name="writingprompts" id="writingprompts" value="value">writingprompts</label>
-                <label><input type="checkbox" name="writing" id="writing" value="value">writing</label>
-                <label><input type="checkbox" name="science" id="science" value="value">science</label>
-                <label><input type="checkbox" name="showerthoughts" id="showerthoughts" value="value">showerthoughts</label>
-                <label><input type="checkbox" name="space" id="space" value="value">space</label>
-                <label><input type="checkbox" name="sports" id="sports" value="value">sports</label>
-                <label><input type="checkbox" name="television" id="television" value="value">television</label>
             </div>
         </div>
     </div>

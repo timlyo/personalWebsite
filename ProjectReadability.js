@@ -3,11 +3,11 @@ var subredditList = ["announcements", "art", "askreddit", "askscience", "aww", "
 	"getmotivated", "gifs", "history", "iama", "internetisbeautiful", "jokes", "lifeprotips", "listentothis",
 	"mildlyinteresting", "movies", "music", "news", "nosleep", "nottheonion", "oldschoolcool", "personalfinance",
 	"philosophy", "photoshopbattles", "pics", "science", "showerthoughts", "space", "sports", "television", "tifu",
-	"todayilearned", "twoxchromosomes", "upliftingnews", "videos", "worldnews", "writingprompts", "writing"];
+	"todayilearned", "twoxchromosomes", "upliftingnews", "videos", "worldnews", "writingprompts"];
 
 var options = {
     hAxis: {title: 'Score'},
-    vAxis: {title: 'Readability'},
+    vAxis: {title: 'Flesch–Kincaid Readability'},
     legend: 'none'
 };
 
@@ -22,7 +22,7 @@ function createChart(){
 }
 
 function draw(){
-    rawData = [['readability', 'score'],[0,0]];
+    rawData = [['readability', 'score'],];
     for(var i = 0; i < subredditList.length; i++){
         if(document.getElementById(subredditList[i]).checked){
             console.log("showing " + subredditList[i])
@@ -30,11 +30,11 @@ function draw(){
             rawData = rawData.concat(allData[i])
         }
     }
-    
+
     console.log(rawData);
-    
+
     var data = google.visualization.arrayToDataTable(rawData);
-    
+
     chart.draw(data, options);
     console.log("Done with chart");
 }
