@@ -30,6 +30,10 @@ function draw(){
             rawData = rawData.concat(allData[i])
         }
     }
+    
+    if(rawData.length == 1){
+        rawData = rawData.concat([0,0])
+    }
 
     console.log(rawData);
 
