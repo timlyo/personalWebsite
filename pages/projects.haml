@@ -1,0 +1,13 @@
+= File.read "partials/header.html"
+
+%body
+	%header
+		= File.read "partials/navigation.html"
+
+	%div.jumbotron
+		%div.container
+			%p currently going through a migration (lack luster for now)
+			%div.project
+				%h2 Readability
+				%img(src="img/Readability.png")
+				%p Scoring Reddit by reading level

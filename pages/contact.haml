@@ -1,0 +1,13 @@
+= File.read "partials/header.html"
+
+%body
+	%header
+		= File.read "partials/navigation.html"
+
+	%div{:class => "jumbotron"}
+		%div{:class => "container"}
+			%h2 Email
+			%p timlyomaddison@gmail.com
+
+			%h2 Github
+			%a{:href => "github.com/timlyo"} github.com/timlyo
