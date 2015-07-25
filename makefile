@@ -4,5 +4,5 @@ all:
 
 clean:
 	find . -name \*.html -type f -delete
-	rm style.css
-	rm -r style.css.map
+	find . -name \*.css -type f -delete
+	find . -name \*.css.map -type f -delete
