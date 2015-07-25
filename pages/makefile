@@ -1,5 +1,10 @@
+directory = ../dist
+
 all:
 	cd partials; make
-	haml contact.haml ../contact.html
-	haml index.haml ../index.html
-	haml projects.haml ../projects.html
+	haml contact.haml ${directory}/contact.html
+	haml index.haml ${directory}/index.html
+	haml projects.haml ${directory}/projects.html
+
+	haml tutorials/tutorials.haml ${directory}/tutorials.html
+	haml tutorials/C++/thread/thread1.haml ${directory}/thread1.html

@@ -3,6 +3,6 @@ all:
 	cd css; make
 
 clean:
-	rm *.html
+	find . -name \*.html -type f -delete
 	rm style.css
 	rm -r style.css.map

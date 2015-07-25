@@ -1,2 +1,5 @@
+directory = ../dist
+
 all: style.sass
-	sass style.sass ../style.css
+	sass style.sass ${directory}/style.css
+	sass codeStyle.sass ${directory}/codeStyle.css

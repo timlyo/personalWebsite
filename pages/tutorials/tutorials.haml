@@ -1,0 +1,12 @@
+= File.read "partials/header.html"
+
+%body
+	%header
+		= File.read "partials/navigation.html"
+
+		%div{:class => "jumbotron"}
+			%div{:class => "container"}
+				%h2 C++ No nonsense guide to std::thread
+				%p This tutorial assumes a basic knowledge of multithreading and is aimed at learning the basics of threading in C++
+				%p
+					%a{:href => "thread1.html"} Part 1 - Creating a thread

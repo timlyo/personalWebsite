@@ -1,0 +1,60 @@
+= File.read "partials/header.html"
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+%link{:type => "text/css", :rel => "stylesheet", :href => "codeStyle.css"}
+
+%body
+	%header
+		= File.read "partials/navigation.html"
+
+		%div{:class => "jumbotron"}
+			%div{:class => "container"}
+				%h2 Creating a thread
+
+				%p
+					%a{:href => "tutorials.html"} Back To List
+					|
+					%a{:href => "thread2.html"} Part 2 - Threading and member Functions
+
+				%pre{:class => "prettyprint"}
+					:preserve
+						#include &ltiostream&gt
+						#include &ltthread&gt
+
+						void sayHello(){
+							std::cout << "Hello Threads!" << std::endl;
+						}
+
+						int main(){
+							std::thread myThread(sayHello);
+
+							myThread.join();
+						}
+
+				%p Simple hey?
+
+				%p
+					%a{:href => "http://en.cppreference.com/w/cpp/thread/thread/thread"} std::thread
+					has a constructor that takes a function as an argument and immediatly calls it. This is all well and good, but running a thread from the main thread to do a single, pre defined action isn't very useful. What about lots of threads? And what about parameters?
+
+				%pre{:class => "prettyprint"}
+					:plain
+						#include &ltiostream&gt
+						#include &ltthread&gt
+						#include &ltvector&gt
+
+						void printNum(int number){
+							std::cout << number << std::endl;
+						}
+
+						int main(){
+							const int numThreads = 10;
+
+							std::vector&ltstd::thread&gt threadPool;
+
+							for(int i = 0; i < numThreads; i++)
+								threadPool.push_back(std::thread(printNum, i));
+
+							for(auto &thread : threadPool){
+								thread.join();
+							}
+						}
