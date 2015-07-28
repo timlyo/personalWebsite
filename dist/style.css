@@ -1,0 +1,23 @@
+.project {
+  float: left;
+  margin: 30px; }
+  .project p, .project h2, .project img {
+    max-width: 200px;
+    text-align: center; }
+  .project img {
+    height: 200px;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  .project img:hover {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px); }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,26 @@
+= File.read "partials/header.html"
+
+%body
+	%header
+		= File.read "partials/navigation.html"
+
+	%div{:class => "jumbotron"}
+		%div{:class => "container"}
+			%h2 Useful Links
+			%p A collection of links that I've found useful over the years(wip)
+
+			%br
+
+			%h3 Linux
+			%ul
+				%li
+					%a{:href => "http://cli.learncodethehardway.org/bash_cheat_sheet.pdf"} Cheat sheet
+				%li
+					%a{:href => "https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf"} Git cheat sheet
+				%li
+					%a{:href => "http://www.makerdyne.com/blog/reading-linux-system-info-with-c/"} Reading system info
+
+			%h3 Programming
+			%ul
+				%li
+					%a{:href => "http://www.glprogramming.com/red/"} OpenGL red book

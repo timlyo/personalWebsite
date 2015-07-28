@@ -1,5 +1,4 @@
-$font: sans-serif
-$primary-color: #333
+$primary-color: #303030
 
 =blur($radius)
   -webkit-filter: blur($radius)
@@ -12,16 +11,14 @@ $primary-color: #333
   -webkit-transition: $time
   transition: $time
 
-body
-  font: 100% $font
-  color: $primary-color
-
 .project
   float: left
   margin: 30px
   p, h2, img
-    max-width: 160px
+    max-width: 200px
+    text-align: center
   img
+    height: 200px
     @include blur(3px)
     @include transition(0.5s)
   img:hover

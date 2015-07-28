@@ -1,4 +1,4 @@
-%nav(class="navbar navbar-inverse")
+%nav(class="navbar navbar-inverse navbar-fixed-top")
   .container
     .navbar-header
       %button.navbar-toggle{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", type: "button"}
@@ -7,6 +7,7 @@
         %span.icon-bar
         %span.icon-bar
     #navbar(class="collapse navbar-collapse")
+      %a{:class => "navbar-brand", :href=>"index.html"} timlyo
       %ul(class="nav navbar-nav")
         %li
           %a{:href => "index.html"} Home

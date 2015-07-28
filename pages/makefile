@@ -5,6 +5,7 @@ all:
 	haml contact.haml ${directory}/contact.html
 	haml index.haml ${directory}/index.html
 	haml projects.haml ${directory}/projects.html
+	haml usefulLinks.haml ${directory}/usefulLinks.html
 
 	haml tutorials/tutorials.haml ${directory}/tutorials.html
 	haml tutorials/C++/thread/thread1.haml ${directory}/thread1.html
