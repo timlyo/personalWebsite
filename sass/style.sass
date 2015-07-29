@@ -1,4 +1,6 @@
 $primary-color: #303030
+$header-color: #222222
+$text-color: #9D9D9D
 
 =blur($radius)
   -webkit-filter: blur($radius)
@@ -7,9 +9,39 @@ $primary-color: #303030
   -ms-filter: blur($radius)
   filter: blur($radius)
 
-=transition($time)
-  -webkit-transition: $time
-  transition: $time
+=transition($type, $time)
+  -webkit-transition: $type $time
+  -moz-transition: $type $time
+  -ms-transition: $type $time
+  -o-transition: $type $time
+  transition: $type $time
+
+#search
+  float: right
+
+#searchResults
+  background-color: $header-color
+  right: 20px
+  top: 47px
+  list-style-type: none
+  position: absolute
+  @include transition(height, 0.5s)
+  border-radius: 5px
+  li
+    padding: 5px
+
+.navbar-collapse
+  ul
+    float: left
+  form
+    padding: 10px
+    color: $text-color
+  input
+    width: 50px
+    @include transition(all, 0.5s)
+    border-radius: 10px
+  input:hover
+    width: 200px
 
 .project
   float: left
@@ -20,6 +52,6 @@ $primary-color: #303030
   img
     height: 200px
     @include blur(3px)
-    @include transition(0.5s)
+    @include transition(all, 0.5s)
   img:hover
     @include blur(0px)

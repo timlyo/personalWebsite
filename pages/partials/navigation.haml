@@ -1,3 +1,5 @@
+
+
 %nav(class="navbar navbar-inverse navbar-fixed-top")
   .container
     .navbar-header
@@ -15,3 +17,13 @@
           %a{:href => "projects.html"} Projects
         %li
           %a{:href => "contact.html"} Contact
+
+      %div{:id => "search"}
+        %form{:role => "search"}
+
+          %label{:for => "text"} Search
+          %input{:type => "text", :id => "searchBox", :autocomplete => "off", :autofocus => true}
+
+        %ul{:id => "searchResults"}
+
+%script{:src => "javascript/search.js"}

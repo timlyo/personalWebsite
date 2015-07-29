@@ -1,4 +1,7 @@
-= File.read "partials/header.html"
+!!!5
+%head
+	= File.read "partials/headerInfo.html"
+	%meta{:name => "keywords", :content => "useful"}
 
 %body
 	%header
@@ -24,3 +27,10 @@
 			%ul
 				%li
 					%a{:href => "http://www.glprogramming.com/red/"} OpenGL red book
+				%li
+					%a{:href => "http://www.r2d3.us/visual-intro-to-machine-learning-part-1/"} Visual machine learning
+
+			%h3 Other stuff
+			%ul
+				%li
+					%a{:href => "http://www.stilldrinking.org/programming-sucks"} Programming sucks
