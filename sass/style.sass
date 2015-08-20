@@ -17,18 +17,19 @@ $text-color: #9D9D9D
   transition: $type $time
 
 #search
+  padding-top: 12px
   float: right
+  color: $text-color
 
-#searchResults
-  background-color: $header-color
-  right: 20px
-  top: 47px
-  list-style-type: none
-  position: absolute
-  @include transition(height, 0.5s)
-  border-radius: 5px
-  li
-    padding: 5px
+  #searchResults
+    background-color: $header-color
+    top: 47px
+    list-style-type: none
+    position: absolute
+    @include transition(height, 0.5s)
+    border-radius: 5px
+    li
+      padding: 2px
 
 .navbar-collapse
   ul

@@ -1,11 +1,14 @@
-= File.read "partials/header.html"
+!!!5
+%head
+	= File.read "partials/headerInfo.html"
+
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 %link{:type => "text/css", :rel => "stylesheet", :href => "codeStyle.css"}
 
 %body
 	%header
 		= File.read "partials/navigation.html"
-
+		
 		%div{:class => "jumbotron"}
 			%div{:class => "container"}
 				%h2 Creating a thread
