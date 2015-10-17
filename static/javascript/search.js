@@ -14,7 +14,7 @@ function onInputChange(){
 		var distArray = levenshteinenator(string, key);
 		var dist = distArray[ distArray.length - 1 ][ distArray[ distArray.length - 1 ].length - 1 ];
 
-		if(dist < 4){
+		if(dist < 10){
 			var pagename = pages[key].replace(".html", "");
 			var html = "<li> <a href=" + pages[key] + ">" + pagename + "</a></li>";
 			results.add("<li>	 <a href=" + pages[key] + ">" + pagename + "</a></li>")
@@ -22,7 +22,9 @@ function onInputChange(){
 	}
 
 	// results.sort();
+	console.log(results);
 	for(let result of results.values()) $(result).appendTo("#searchResults").hide().slideDown();
 }
 
 $("#searchBox").on("input", onInputChange);
+console.log("search handler installed");

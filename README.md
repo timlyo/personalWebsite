@@ -3,5 +3,8 @@ My personal website
 
 ##Dependencies
 * Sass
-* Haml
-* GNU make
+* python3.5
+* apache
+* mod_wsgi
+* flask (python module)
+* markdown2 (python module)
