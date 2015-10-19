@@ -2,7 +2,6 @@ import os
 import sys
 
 import markdown2
-import toml
 
 ARTICLE_DIRECTORY = "static/articles/"
 
