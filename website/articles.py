@@ -1,54 +1,80 @@
+import json
 import os
 import sys
+from datetime import datetime
 
 import markdown2
 
-ARTICLE_DIRECTORY = "static/articles/"
+ARTICLE_DIRECTORY = "data/articles/"
 
 # https://github.com/trentm/python-markdown2/wiki/Extras
-MARKDOWN_EXTRAS = ["fenced-code-blocks", "metadata", "tables", "smarty-pants"]
+MARKDOWN_EXTRAS = ["fenced-code-blocks", "tables"]
 
 
 class Article:
-    def __init__(self, file):
-        """
-        :param file: filename without the extension
-        :param kwargs:
-        """
-        self.file = file
-        file = open(ARTICLE_DIRECTORY + self.file + ".md")
-        processed = markdown2.markdown(file.read(), extras=MARKDOWN_EXTRAS)
+	def __init__(self, name):
+		"""
+		:param name: filename without the extension
+		:param kwargs:
+		"""
+		try:
+			self.name = name  # name of url (file name without extension)
+			self.path = ARTICLE_DIRECTORY + self.name + ".md"
+			self.content = open(self.path).read().split("---")  # list of metadata and markdown
 
-        print(processed.metadata)
+			self.metadata = json.loads(self.content[0])
 
-        self.title = processed.metadata["title"]
-        self.outline = processed.metadata["outline"]
-        self.content = processed
+			self.html = None
 
-        print("Loaded " + self.file)
+			self.title = self.get_metadata("title")
+			self.outline = self.get_metadata("outline")
 
-    def __repr__(self):
-        return "{} from {}.md".format(self.title, self.file)
+			date = [int(x) for x in self.get_metadata("date").split("/")]
+			self.date = datetime(date[0], date[1], date[2])
+
+			self.tags = self.get_metadata("tags")
+
+		finally:
+			pass
+
+	def __repr__(self):
+		return "{} from {}.md".format(self.title, self.name)
+
+	def get_html(self) -> str:
+		if not self.html:
+			self.html = markdown2.markdown(self.content[1], extras=MARKDOWN_EXTRAS)
+		return self.html
+
+	def get_metadata(self, attribute):
+		data = None
+		try:
+			data = self.metadata[attribute]
+		except AttributeError as e:
+			print("Failed to get article attribute", attribute, "because", e, file=sys.stderr)
+		finally:
+			return data
 
 
 def get_article_by_name(name: str) -> Article:
-    # TODO existence check
-    return Article(name)
+	# TODO existence check
+	return Article(name)
 
 
-def get_all_articles() -> list:
-    articles = []
-    for file in os.listdir(ARTICLE_DIRECTORY):
-        try:
-            file = str(file).replace(".md", "")
+def get_all_articles(sorted=True) -> list:
+	articles = []
+	for file in os.listdir(ARTICLE_DIRECTORY):
+		try:
+			file = str(file).replace(".md", "")
 
-            article = Article(file)
-            articles.append(article)
-        except Exception as e:
-            print(e, file=sys.stderr)
+			article = Article(file)
+			articles.append(article)
+		except Exception as e:
+			print(e, file=sys.stderr)
 
-    return articles
+	if sorted:
+		try:  # fails if date doesn't load
+			articles.sort(key=lambda x: x.date, reverse=True)
+		except:
+			pass
 
-
-def get_all_articles_sorted_date():
-    pass
+	return articles

@@ -1,7 +1,9 @@
----
-title: Website Development Part 1 - The static pages
-outline: How this website was made
-date: 2015/16/10
+{
+    "title": "Website Development Part 1 - The static pages",
+    "outline": "How this website was made",
+    "date": "2015/10/16",
+    "tags": ["website", "development"]
+}
 ---
 
 # Website Development Part 1 - The Static Pages

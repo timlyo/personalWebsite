@@ -1,4 +1,5 @@
 ram_chart = null;
+cpu_chart = null;
 
 function get_ram(){
 	$.ajax({
@@ -15,6 +16,18 @@ function get_ram(){
 	})
 }
 
+function get_cpu(){
+	$.ajax({
+		url: "/_cpu",
+		dataType: "json",
+		success: function(msg){
+			percentage = msg["percentage"],
+			data = {series: [percentage]};
+			cpu_chart.update(data, ram_chart.options);
+		}
+	})
+}
+
 function create_graphs(){
 	ram_chart = new Chartist.Pie('#ram', {
         labels: ["server", "other"],
@@ -25,4 +38,13 @@ function create_graphs(){
       donutWidth: 60,
       showLabel: true
     });
+
+	cpu_chart = new Chartist.Line('#cpu', {
+        series: [[5, 1, 10, 4]],
+        labels: ["5","4", "3", "2", "1"]
+    }, {
+		showLabel: true,
+    });
+
+    console.log(cpu_chart);
 }

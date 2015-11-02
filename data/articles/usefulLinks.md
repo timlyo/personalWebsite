@@ -1,6 +1,10 @@
----
-title: Useful Links
-outline: A Collection of useful links
+{
+    "title": "Useful Links",
+    "outline": "A Collection of useful links",
+    "date": "2015/5/8",
+    "tags": ["useful", "links"]
+}
+
 ---
 
 ## Useful Links
@@ -12,6 +16,7 @@ A collection of links that I've found useful over the years
 * [Bash Cheat sheet](http://cli.learncodethehardway.org/bash_cheat_sheet.pdf)
 * [Git Cheat Sheet](https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf)
 * [Reading system info with C](http://www.makerdyne.com/blog/reading-linux-system-info-with-c/)
+* [Modern Rosetta Stone](https://certsimple.com/rosetta-stone)
 
 ### Programming
 
