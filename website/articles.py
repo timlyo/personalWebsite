@@ -34,6 +34,9 @@ class Article:
 
 			self.tags = self.get_metadata("tags")
 
+		except BaseException as e:
+			print(e)
+
 		finally:
 			pass
 
