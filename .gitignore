@@ -1,3 +1,6 @@
 *.css.map
 *.css
 *.html
+
+.idea/
+.sass-cache/
