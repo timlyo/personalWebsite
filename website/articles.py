@@ -17,6 +17,7 @@ class Article:
 		:param name: filename without the extension
 		:param kwargs:
 		"""
+		print("Loading article", name)
 		try:
 			self.name = name  # name of url (file name without extension)
 			self.path = ARTICLE_DIRECTORY + self.name + ".md"
