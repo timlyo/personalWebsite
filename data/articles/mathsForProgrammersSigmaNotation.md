@@ -10,7 +10,7 @@
 
 > $\Sigma$ based on a nominalization of a verb σίζω (sízō, from earlier *sig-jō, meaning 'I hiss')
 
-Sometimes wikipedia just sums it up best, Sigma notation does make me want to hiss and boo. Yet I can't escape it. Everywhere I encounter some sort of summation, it's there. Starting at me amidst far more sensible glyphs. Urging me to google the syntax just that one more time. Fervently hoping that maybe, just maybe, I'll remember it. At least if the link is on on my own site I wont have to google for it right?
+Sometimes Wikipedia just sums it up best, Sigma notation does make me want to hiss and boo. Yet I can't escape it. Everywhere I encounter some sort of summation, it's there. Starting at me amidst far more sensible glyphs. Urging me to google the syntax just that one more time. Fervently hoping that maybe, just maybe, I'll remember it. At least if the link is on on my own site I wont have to google for it right?
 
 
 Sigma, or sum notation, is used for summations. In other words, it's a way for mathematicians to confuse mortals when they want to add some things together. For example $ \sum\limits_{i=1}^4 i $ has a much simpler form in C++:
@@ -52,4 +52,4 @@ int calculate(int i, const int max){
 }
 ```
 
-Ok, maybe sigma notation does have it's benefits, a standardised format, less verbose. Hmm, starting to sound like python to me.
+Ok, maybe sigma notation does have it's benefits, a standardised format, less verbose. Starting to sound like python to me.
