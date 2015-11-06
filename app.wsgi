@@ -1,7 +1,7 @@
 import sys
 import os
 
-sys.path.insert(0, "/home/tim/http/timlyo")
-os.chdir("/home/tim/http/timlyo")
+sys.path.insert(0, "/home/tim/http/personalWebsite")
+os.chdir("/home/tim/http/personalWebsite")
 
 from main import app as application
