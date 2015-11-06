@@ -15,7 +15,9 @@
             <a href="{{ 'articles/' + article.name }}">
                 <h3>
                     {{article.title}}
-                    <small>{{article.date.strftime("%Y/%m/%d")}}</small>
+                    {{if article.data}}
+                        <small>{{article.date.strftime("%Y/%m/%d")}}</small>
+                    {{endif}}
                 </h3>
             </a>
             {% if article.outline %}
