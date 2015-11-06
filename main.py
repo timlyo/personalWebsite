@@ -1,3 +1,4 @@
+import sys
 import argparse
 from multiprocessing import Process
 
@@ -71,6 +72,7 @@ def getSearchResults():
 if __name__ == "__main__":
 	tagger = Process(target=tagging.tag_all_articles)
 	# tagger.start()
+	print("running on python ", sys.version_info)
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-d", dest="debug", type=bool)
