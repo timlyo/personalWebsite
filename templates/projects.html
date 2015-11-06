@@ -1,0 +1,39 @@
+{% extends "partials/layout.html" %}
+{% block body %}
+<div class='container'>
+
+    <div class="col-sm-3 card project">
+        <a href='articles/usefulLinks'>
+            <h3>Useful Links</h3>
+            <img src='static/img/tux.png' class="img-responsive">
+        </a>
+
+        <p>Collection of useful articles</p>
+    </div>
+
+    <div class='col-sm-3 card project'>
+        <a href='articles/mathsForProgrammers'>
+            <h3>Maths for Programmers</h3>
+            <img src='static/img/sigma.png' class="img-responsive">
+        </a>
+
+        <p>Maths, but explained logically</p>
+    </div>
+
+    <div class='col-sm-3 card project'>
+        <a href='articles/websiteDevelopment1'>
+            <h3>Website Development</h3>
+            <img src='static/img/html-tag.png' class="img-responsive">
+        </a>
+
+        <p>The history of this website</p>
+    </div>
+
+    <script>
+    window.onload({
+      $(".card").animate({ opacity: 0 }, 700);​
+      $(".card").delay(1000).animate({ opacity: 1 }, 700);​
+    });
+    </script>
+</div>
+{% endblock %}

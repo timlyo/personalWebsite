@@ -1,0 +1,41 @@
+{% extends "partials/layout.html" %}
+
+{% block headerAdditionals %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.9.4/chartist.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.9.4/chartist.min.js" charset="utf-8"></script>
+<script src="{{ url_for('static', filename='javascript/stats.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div class='container'>
+    <div class="col-md-4 card">
+        <p>Ram</p>
+
+        <div id="ram" class="ct-chart ct-golden-section">
+
+        </div>
+    </div>
+
+    <div class="col-md-7 card">
+        <p>Cpu</p>
+
+        <div id="cpu" class="ct-chart ct-golden-section">
+
+        </div>
+    </div>
+
+    <div class="col-md-4 card">
+        <p>Disk</p>
+    </div>
+</div>
+
+<script>
+window.onload = function() {
+    create_graphs();
+    window.setInterval(get_ram, 1000);
+    <!--window.setInterval(get_cpu, 500);-->
+}
+
+
+</script>
+{% endblock %}

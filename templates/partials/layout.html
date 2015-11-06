@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+
+    <link href='{{url_for("static", filename="css/style.css")}}' rel='stylesheet' type='text/css'>
+
+    <meta charset='UTF-8'>
+    <meta content='timlyo personal site' name='description'>
+    <meta content='personal, projects, programming' name='keywords'>
+    <meta content='Tim Maddison' name='author'>
+
+    {% block title %} <title>timlyo</title> {% endblock %}
+    {% block headerAdditionals %} {% endblock %}
+</head>
+
+<body>
+    {% block navigation %}
+        {% include "partials/navigation.html" %}
+    {% endblock %}
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <br>
+
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
