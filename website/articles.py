@@ -39,7 +39,7 @@ class Article:
 			print("Error", e)
 
 		finally:
-			pass
+			print("Loaded")
 
 	def __repr__(self):
 		return "{} from {}.md".format(self.title, self.name)
