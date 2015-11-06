@@ -19,6 +19,7 @@ class Article:
 		"""
 		print("Loading article", name)
 		try:
+			self.date = None
 			self.name = name  # name of url (file name without extension)
 			self.path = ARTICLE_DIRECTORY + self.name + ".md"
 			self.content = open(self.path).read().split("---")  # list of metadata and markdown
@@ -36,7 +37,7 @@ class Article:
 			self.tags = self.get_metadata("tags")
 
 		except BaseException as e:
-			print(e)
+			print("Error", e)
 
 		finally:
 			pass

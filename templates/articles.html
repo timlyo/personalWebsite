@@ -12,7 +12,12 @@
         <p>A collection of my thoughts and musings</p>
         {% for article in articles %}
         <div class="articleTitle">
-            <a href="{{ 'articles/' + article.name }}"><h3>{{article.title}} <small>{{article.date.strftime("%Y/%m/%d")}}</small> </h3></a>
+            <a href="{{ 'articles/' + article.name }}">
+                <h3>
+                    {{article.title}}
+                    <small>{{article.date.strftime("%Y/%m/%d")}}</small>
+                </h3>
+            </a>
             {% if article.outline %}
                 <p> {{article.outline}} </p>
             {% endif %}
