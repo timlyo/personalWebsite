@@ -24,6 +24,7 @@ A collection of links that I've found useful over the years
 * [OpenGL red book](http://www.glprogramming.com/red/)
 * [Error handling in rust](http://blog.burntsushi.net/rust-error-handling/)
 * [Visual machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)
+* [Neural networks and deep learning](http://neuralnetworksanddeeplearning.com/)
 
 ### Other stuff
 
