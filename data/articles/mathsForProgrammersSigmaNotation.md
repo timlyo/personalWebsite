@@ -8,7 +8,7 @@
 
 # Sigma Notation
 
-> $\Sigma$ based on a nominalization of a verb σίζω (sízō, from earlier *sig-jō, meaning 'I hiss')
+> $\Sigma$ based on a nominalisation of a verb σίζω (sízō, from earlier *sig-jō, meaning 'I hiss')
 
 Sometimes Wikipedia just sums it up best, Sigma notation does make me want to hiss and boo. Yet I can't escape it. Everywhere I encounter some sort of summation, it's there. Starting at me amidst far more sensible glyphs. Urging me to google the syntax just that one more time. Fervently hoping that maybe, just maybe, I'll remember it. At least if the link is on on my own site I wont have to google for it right?
 

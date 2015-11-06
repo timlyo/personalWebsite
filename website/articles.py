@@ -21,7 +21,7 @@ class Article:
 		try:
 			self.name = name  # name of url (file name without extension)
 			self.path = ARTICLE_DIRECTORY + self.name + ".md"
-			self.content = open(self.path).read().split("---")  # list of metadata and markdown
+			self.content = open(self.path, encoding="utf-8").read().split("---")  # list of metadata and markdown
 
 			self.metadata = json.loads(self.content[0])
 
