@@ -1,12 +1,3 @@
-{
-    "title": "Useful Links",
-    "outline": "A Collection of useful links",
-    "date": "2015/5/8",
-    "tags": ["useful", "links"]
-}
-
----
-
 ## Useful Links
 
 A collection of links that I've found useful over the years

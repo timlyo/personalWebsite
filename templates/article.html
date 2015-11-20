@@ -13,17 +13,22 @@
 {% endblock %}
 
 {% block title %}
-    <title>{{ article.title }}</title>
+    <title>{{ info.title }}</title>
 {% endblock %}
 
 {% block body %}
 <div class='container'>
     <div class="article card col-md-8">
-        {{ article.get_html() | safe }}
+        {{ html | safe }}
     </div>
 
-    <div class="article card col-md-3 col-md-offset-1" id="sideBar">
-        <h3>Related Articles</h3>
-    </div>
+    {% if info["related"] %}
+        <div class="article card col-md-3 col-md-offset-1" id="sideBar">
+            <h3>Related Articles</h3>
+            {% for article in related %}
+                 <a href="{{article.url}}">{{article.title}}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
 </div>
 {% endblock %}

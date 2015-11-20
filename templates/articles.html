@@ -12,11 +12,11 @@
         <p>A collection of my thoughts and musings</p>
         {% for article in articles %}
         <div class="articleTitle">
-            <a href="{{ 'articles/' + article.name }}">
+            <a href="{{ 'articles/' + article.url }}">
                 <h3>
                     {{article.title}}
                     {%if article.date %}
-                        <small>{{article.date.strftime("%Y/%m/%d")}}</small>
+                        <small>{{article.date}}</small>
                     {% endif %}
                 </h3>
             </a>

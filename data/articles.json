@@ -1,0 +1,42 @@
+{
+  "_default": {
+    "1": {
+      "title": "Useful Links",
+      "url": "usefulLinks",
+      "markdown": "usefulLinks.md",
+      "outline": "A collection of useful links",
+      "date": "2015/5/8",
+      "tags": ["useful", "programming"],
+      "related": ["mathsForProgrammers"]
+    },
+    "2": {
+      "title": "Website Development Part 1 - The static pages",
+      "url": "websiteDevelopment1",
+      "markdown": "websiteDevelopment1.md",
+      "outline": "How this website was made",
+      "date": "2015/10/16"
+    },
+    "3": {
+      "title": "Website Development Part 2 - Things get dynamic",
+      "url": "websiteDevelopment2",
+      "markdown": "websiteDevelopment2.md",
+      "outline": "How this website was made",
+      "date": "2015/10/17"
+    },
+    "4": {
+      "title": "Maths For Programmers",
+      "url": "mathsForProgrammers",
+      "markdown": "mathsForProgrammers.md",
+      "outline": "Maths, only logical",
+      "date": "2015/10/26"
+    },
+    "5": {
+      "title": "Sigma Notation - Maths For Programmers",
+      "url": "mathsForProgrammersSigmaNotation",
+      "markdown": "mathsForProgrammersSigmaNotation.md",
+      "outline": "Maths, only logical",
+      "date": "2015/10/26",
+      "related": ["mathsForProgrammers"]
+    }
+  }
+}

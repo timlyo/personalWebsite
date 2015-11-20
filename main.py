@@ -1,12 +1,9 @@
-import sys
 import argparse
-from multiprocessing import Process
 
 from flask import Flask, render_template, jsonify
 
-from website import articles
 from website import system
-from website import tagging
+from website import articles
 
 app = Flask(__name__)
 
@@ -53,15 +50,24 @@ def projects_page():
 
 @app.route("/articles")
 def articles_page():
-	recentArticles = articles.get_all_articles()
+	recentArticles = reversed(articles.get_all_articles())
 	return render_template("articles.html", articles=recentArticles)
 
 
 @app.route("/articles/<name>")
 def getArticle(name):
-	article = articles.get_article_by_name(name)
-	print("Displaying {}".format(article))
-	return render_template("article.html", article=article)
+	info = articles.get_article_data_by_url(name)
+	html = articles.get_article_html(name)
+
+	related = []
+	try:
+		for article in info["related"]:
+			related.append(articles.get_article_data_by_url(article))
+	except KeyError:
+		related = None
+		
+	print("Displaying {}".format(info))
+	return render_template("article.html", info=info, html=html, related=related)
 
 
 @app.route("/search")
@@ -70,10 +76,6 @@ def getSearchResults():
 
 
 if __name__ == "__main__":
-	tagger = Process(target=tagging.tag_all_articles)
-	# tagger.start()
-	print("running on python ", sys.version_info)
-
 	parser = argparse.ArgumentParser()
 	parser.add_argument("-d", dest="debug", type=bool)
 	args = parser.parse_args()

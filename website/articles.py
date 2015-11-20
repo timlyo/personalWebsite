@@ -1,84 +1,38 @@
-import json
-import os
 import sys
-from datetime import datetime
-
+from tinydb import TinyDB, where
 import markdown2
 
-ARTICLE_DIRECTORY = "data/articles/"
-
-# https://github.com/trentm/python-markdown2/wiki/Extras
-MARKDOWN_EXTRAS = ["fenced-code-blocks", "tables"]
+articles_db = TinyDB("data/articles.json")
 
 
-class Article:
-	def __init__(self, name):
-		"""
-		:param name: filename without the extension
-		:param kwargs:
-		"""
-		print("Loading article", name)
-		try:
-			self.name = name  # name of url (file name without extension)
-			self.path = ARTICLE_DIRECTORY + self.name + ".md"
-			self.content = open(self.path, encoding="utf-8").read().split("---")  # list of metadata and markdown
-
-			self.metadata = json.loads(self.content[0])
-
-			self.html = None
-
-			self.title = self.get_metadata("title")
-			self.outline = self.get_metadata("outline")
-
-			date = [int(x) for x in self.get_metadata("date").split("/")]
-			self.date = datetime(date[0], date[1], date[2])
-
-			self.tags = self.get_metadata("tags")
-
-		except BaseException as e:
-			print("Error", e)
-
-		finally:
-			print("Loaded")
-
-	def __repr__(self):
-		return "{} from {}.md".format(self.title, self.name)
-
-	def get_html(self) -> str:
-		if not self.html:
-			self.html = markdown2.markdown(self.content[1], extras=MARKDOWN_EXTRAS)
-		return self.html
-
-	def get_metadata(self, attribute):
-		data = None
-		try:
-			data = self.metadata[attribute]
-		except AttributeError as e:
-			print("Failed to get article attribute", attribute, "because", e, file=sys.stderr)
-		finally:
-			return data
+def get_all_articles():
+	return articles_db.all()
 
 
-def get_article_by_name(name: str) -> Article:
-	# TODO existence check
-	return Article(name)
+def get_article_data_by_url(url: str):
+	results = articles_db.search(where("url") == url)
+	if len(results) == 0:
+		raise FileNotFoundError("Error: no article with url " + url)
+	elif len(results) == 1:
+		return results[0]
+	else:
+		# TODO handle multiple results case
+		return results[0]
 
 
-def get_all_articles(sorted=True) -> list:
-	articles = []
-	for file in os.listdir(ARTICLE_DIRECTORY):
-		try:
-			file = str(file).replace(".md", "")
+def get_article_html(url: str):
+	info = get_article_data_by_url(url)
+	html = None
+	if "html" in info:
+		html = get_contents(info["html"])
+	elif "markdown" in info:
+		markdown = get_contents(info["markdown"])
+		html = markdown2.markdown(markdown)
+	return html
 
-			article = Article(file)
-			articles.append(article)
-		except Exception as e:
-			print(e, file=sys.stderr)
 
-	if sorted:
-		try:  # fails if date doesn't load
-			articles.sort(key=lambda x: x.date, reverse=True)
-		except:
-			pass
-
-	return articles
+def get_contents(filename: str):
+	contents = None
+	with open("data/articles/" + filename) as file:
+		contents = file.read()
+	return contents

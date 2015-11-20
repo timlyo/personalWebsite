@@ -1,11 +1,3 @@
-{
-    "title": "Website Development Part 1 - The static pages",
-    "outline": "How this website was made",
-    "date": "2015/10/16",
-    "tags": ["website", "development"]
-}
----
-
 # Website Development Part 1 - The Static Pages
 
 > You have to believe me, this was a stupid decision, but I did it with the best intentions. Some of the worst things imaginable have been done with the best intentions. You know what, Billy? As far as I'm concerned, you're no better than the people that built this place.

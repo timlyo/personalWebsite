@@ -1,11 +1,3 @@
-{
-    "title": "Maths For Programmers - Sigma Notation",
-    "outline": "Sigma Notation for Programmers",
-    "date": "2015/10/26",
-    "tags": ["maths"]
-}
----
-
 # Sigma Notation
 
 > $\Sigma$ based on a nominalisation of a verb σίζω (sízō, from earlier *sig-jō, meaning 'I hiss')
