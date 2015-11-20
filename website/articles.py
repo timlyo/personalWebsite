@@ -1,8 +1,8 @@
-import sys
 from tinydb import TinyDB, where
 import markdown2
 
 articles_db = TinyDB("data/articles.json")
+MARKDOWN_EXTRAS = ["fenced-code-blocks", "tables"]
 
 
 def get_all_articles():
@@ -27,7 +27,7 @@ def get_article_html(url: str):
 		html = get_contents(info["html"])
 	elif "markdown" in info:
 		markdown = get_contents(info["markdown"])
-		html = markdown2.markdown(markdown)
+		html = markdown2.markdown(markdown, extras=MARKDOWN_EXTRAS)
 	return html
 
 
