@@ -33,6 +33,6 @@ def get_article_html(url: str):
 
 def get_contents(filename: str):
 	contents = None
-	with open("data/articles/" + filename) as file:
+	with open("data/articles/" + filename, "r", encoding="utf8") as file:
 		contents = file.read()
 	return contents
