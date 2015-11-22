@@ -37,6 +37,14 @@
       "outline": "Maths, only logical",
       "date": "2015/10/26",
       "related": ["mathsForProgrammers"]
+    },
+    "6": {
+      "title": "Camp Light",
+      "url": "campLight1",
+      "markdown": "campLight1.md",
+      "outline": "Making a lantern up to my standards",
+      "date": "2015/11/22",
+      "tags": ["electronics", "arduino"]
     }
   }
 }
