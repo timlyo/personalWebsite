@@ -1,28 +1,27 @@
 $background: #EEE
 $foreground: #FFF
 $shadow: #D3D3D3
-$hyper-link: #A2482E
 
-=blur($radius)
-	-webkit-filter: blur($radius)
-	-moz-filter: blur($radius)
-	-o-filter: blur($radius)
-	-ms-filter: blur($radius)
-	filter: blur($radius)
-
-=transition($type, $time)
-	-webkit-transition: $type $time
-	-moz-transition: $type $time
-	-ms-transition: $type $time
-	-o-transition: $type $time
-	transition: $type $time
+//=blur($radius)
+//	-webkit-filter: blur($radius)
+//	-moz-filter: blur($radius)
+//	-o-filter: blur($radius)
+//	-ms-filter: blur($radius)
+//	filter: blur($radius)
+//
+//=transition($type, $time)
+//	-webkit-transition: $type $time
+//	-moz-transition: $type $time
+//	-ms-transition: $type $time
+//	-o-transition: $type $time
+//	transition: $type $time
 
 body
 	background-color: $background
 	padding-top: 4em
-	font-family: "awesome", sans
-	p
-		font-family: "awesome", sans
+	font-family: sans-serif
+	p, li
+		font-family: serif
 		font-size: 1.5em
 
 .card
@@ -34,22 +33,6 @@ body
 .navbar
 	box-shadow: 0px 5px 15px $shadow
 
-#search
-	padding-top: 12px
-	float: right
-	color: $text-color
-
-	#searchResults
-		top: 47px
-		list-style-type: none
-		position: absolute
-		@include transition(height, 0.5s)
-		border-radius: 5px
-
-	li
-		padding: 2px
-		padding-right: 10px
-
 .project
 	h3
 		height: 2em
@@ -60,5 +43,3 @@ body
 		margin-right: auto
 	p
 		text-align: center
-
-.article
