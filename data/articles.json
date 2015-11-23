@@ -28,7 +28,8 @@
       "url": "mathsForProgrammers",
       "markdown": "mathsForProgrammers.md",
       "outline": "Maths, only logical",
-      "date": "2015/10/26"
+      "date": "2015/10/26",
+      "latex": true
     },
     "5": {
       "title": "Sigma Notation - Maths For Programmers",
@@ -36,7 +37,8 @@
       "markdown": "mathsForProgrammersSigmaNotation.md",
       "outline": "Maths, only logical",
       "date": "2015/10/26",
-      "related": ["mathsForProgrammers"]
+      "related": ["mathsForProgrammers"],
+      "latex": true
     },
     "6": {
       "title": "Camp Light",

@@ -3,13 +3,16 @@
 {% block headerAdditionals %}
     <link href='{{url_for("static", filename="css/articleStyle.css")}}' rel='stylesheet' type='text/css'>
     <link href='{{url_for("static", filename="css/codeStyle.css")}}' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" async
-            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
 
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
+    {% if info["latex"] %}
+        <script type="text/javascript" async
+                src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+    {% endif %}
 {% endblock %}
 
 {% block title %}
