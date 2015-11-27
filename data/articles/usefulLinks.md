@@ -22,6 +22,11 @@ A collection of links that I've found useful over the years
 * [Programming sucks](http://www.stilldrinking.org/programming-sucks)
 * [Gitxiv: Collaborative open Computer Science](http://gitxiv.com/)
 
+
+### Maths
+
+* [Interactive guide to the fourier transform](http://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
+
 ### Humour
 
 * [If PHP were British](https://www.addedbytes.com/blog/if-php-were-british/)
