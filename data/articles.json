@@ -14,7 +14,8 @@
       "url": "websiteDevelopment1",
       "markdown": "websiteDevelopment1.md",
       "outline": "How this website was made",
-      "date": "2015/10/16"
+      "date": "2015/10/16",
+      "related": ["websiteDevelopment2"]
     },
     "3": {
       "title": "Website Development Part 2 - Things get dynamic",
@@ -46,7 +47,33 @@
       "markdown": "campLight1.md",
       "outline": "Making a lantern up to my standards",
       "date": "2015/11/22",
-      "tags": ["electronics", "arduino"]
+      "tags": ["electronics", "arduino"],
+      "related": ["campLight2"]
+    },
+    "7": {
+      "title": "Camp Light 2",
+      "url": "campLight2",
+      "markdown": "campLight2.md",
+      "outline": "Lightin' stuff",
+      "date": "2015/11/23",
+      "tags": ["electronics", "arduino"],
+      "related": ["campLight1"]
+    },
+    "8": {
+      "title": "Evergreen Scouts",
+      "url": "evergreenScouts",
+      "markdown": "evergreenScouts.md",
+      "outline": "Requirements for the evergreen scouts website",
+      "date": "2015/11/15",
+      "tags": ["website", "scouts"]
+    },
+    "9": {
+      "title": "Useful Prints",
+      "url": "usefulPrints",
+      "markdown": "usefulPrints.md",
+      "outline": "A collection of useful printed things",
+      "date": "2015/12/3",
+      "tags": ["3dprinting", "useful"]
     }
   }
 }

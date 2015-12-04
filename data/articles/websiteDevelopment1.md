@@ -1,12 +1,14 @@
 # Website Development Part 1 - The Static Pages
 
-> You have to believe me, this was a stupid decision, but I did it with the best intentions. Some of the worst things imaginable have been done with the best intentions. You know what, Billy? As far as I'm concerned, you're no better than the people that built this place.
+> You have to believe me, this was a stupid decision, but I did it with the best intentions. 
+    <br> <br>
+> Some of the worst things imaginable have been done with the best intentions. You know what, Billy? As far as I'm concerned, you're no better than the people that built this place.
 
 ## The Beginning
 
 Ignoring my previous forays into web development, this is where it all began. It was the 2<sup>nd</sup> year of university, late in a warm, British, summer evening; rain was gently moistening the outside world and I needed to present my [data analysis project](https://github.com/timlyo/redditReadability). A few hours later I'd created a github pages repository; created an index page, a contact page, and a project page; mushed bootstrap on top of the entire thing and sent it in for grading.
 
-About the only decision that I can say I was proud of is my use of haml and sass. At least maintainace was easy. This site had so little content, even a minimalist would begin quoting Oliver Twist. Yet it was mine, with my name on it and, more importantly, let me get the grade for my project.
+About the only decision that I can say I don't regret at all was my use of haml and sass. At least maintainace was easy. This site had so little content, even a minimalist would begin quoting Oliver Twist. Yet it was mine, with my name on it and, more importantly, it got me the grade for my project.
 
 ## Unwarranted Features and Misguided Implementations
 

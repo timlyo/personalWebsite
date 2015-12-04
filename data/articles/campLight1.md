@@ -13,7 +13,8 @@ Here's what I'm looking for:
 
 Some other stuff that I'd like to add.
 
-* Colour changing. I'd like something like [Redshift](http://jonls.dk/redshift/) or [F.lux](https://justgetflux.com/) so I can comfortably use it late at night.
+* Colour changing. I'd like something like [Redshift](http://jonls.dk/redshift/) or [F.lux](https://justgetflux.com/) so I can comfortably use it late at night, and some fancy pulsing modes.
+* Brightness control.
 * Flash to music.
 * Candle flicker. I just think that would be nice.
 * Clips to hang the light from. Maybe a hook, although magnets may be interesting.
@@ -28,7 +29,7 @@ You might have guessed, this isn't just going to be a *hook a AAA up to an led a
 
 The most important point is the leds. I'd recently ordered a pack of [50 Gorgeous ultra bright 5mm LEDs Emitting Diode](http://www.amazon.co.uk/gp/product/B008AGOLQA) (whatever that means) but at about a 50th of the price of Maplin, I can hardly complain(3.4pence each vs £1.49 each) I just hope these Light Emitting Diodes Emitting Diode should be bright enough.
 
-I also have some [RGB LEDs](http://www.amazon.co.uk/gp/product/B005VMDROS) to add that colour into my lamp. Some testing will occur to see if they are bright enough without the aforementioned "Goregous ultra bright" LEDs. 
+I also have some [RGB LEDs](http://www.amazon.co.uk/gp/product/B005VMDROS) <sup>[data sheet](http://proto-pic.co.uk/content/datasheets/5mm_RGB_led_common_cathodeDatasheet.pdf )</sup> to add that colour into my lamp. Some testing will occur to see if they are bright enough without the aforementioned "Goregous ultra bright" LEDs. 
  
  We'll also need a way to control our lamp. For this I've chosen the [Arduino Nano](https://www.arduino.cc/en/Main/ArduinoBoardNano). An adaptable, battle proven board; that I just happen to have sat on my desk. The nano has 14 digital and 8 analogue io ports, along with a 3.3 volt output. Considering the LEDs run at 3.2 to 3.5 volts, this just makes it even more convenient.
  

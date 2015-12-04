@@ -2,27 +2,17 @@ $background: #EEE
 $foreground: #FFF
 $shadow: #D3D3D3
 
-//=blur($radius)
-//	-webkit-filter: blur($radius)
-//	-moz-filter: blur($radius)
-//	-o-filter: blur($radius)
-//	-ms-filter: blur($radius)
-//	filter: blur($radius)
-//
-//=transition($type, $time)
-//	-webkit-transition: $type $time
-//	-moz-transition: $type $time
-//	-ms-transition: $type $time
-//	-o-transition: $type $time
-//	transition: $type $time
+
 
 body
 	background-color: $background
 	padding-top: 4em
 	font-family: sans-serif
+	-ms-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+	margin: 0
 	p, li
-		font-family: serif
-		font-size: 1.5em
+		font-size: 20px
 
 .card
 	background-color: $foreground
@@ -31,7 +21,6 @@ body
 	padding: 10px
 
 .navbar
-	box-shadow: 0px 5px 15px $shadow
 	font-family: sans-serif
 	li
 		font-family: inherit
@@ -42,7 +31,6 @@ body
 		text-align: center
 	img
 		max-height: 180px
-		margin-left: auto
-		margin-right: auto
+		margin: auto
 	p
 		text-align: center
