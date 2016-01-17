@@ -23,6 +23,11 @@ A collection of links that I've found useful over the years
 * [Gitxiv: Collaborative open Computer Science](http://gitxiv.com/)
 * [Why privacy is important and having nothing to hide is irrelevant](http://robindoherty.com/2016/01/06/nothing-to-hide.html)
 
+
+### Maths
+
+* [Interactive guide to the fourier transform](http://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
+
 ### Humour
 
 * [If PHP were British](https://www.addedbytes.com/blog/if-php-were-british/)
