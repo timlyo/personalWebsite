@@ -5,12 +5,20 @@ articles_db = TinyDB("data/articles.json")
 MARKDOWN_EXTRAS = ["fenced-code-blocks", "tables"]
 
 
-def get_all_articles():
-	return articles_db.all()
+def get_published():
+	return articles_db.search(where("state") == 1)
 
 
-def get_article_data_by_url(url: str):
-	results = articles_db.search(where("url") == url)
+def get_article_data_by_url(url: str, non_published=False) -> dict:
+	"""
+	:param url: url of article to get
+	:param non_published: whether to return data if article is not in published state
+	"""
+	if non_published:
+		results = articles_db.search(where("url") == url)
+	else:
+		results = articles_db.search((where("url") == url) & (where("state") == 1))
+
 	if len(results) == 0:
 		raise FileNotFoundError("Error: no article with url " + url)
 	elif len(results) == 1:

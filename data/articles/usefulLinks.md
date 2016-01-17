@@ -21,6 +21,7 @@ A collection of links that I've found useful over the years
 
 * [Programming sucks](http://www.stilldrinking.org/programming-sucks)
 * [Gitxiv: Collaborative open Computer Science](http://gitxiv.com/)
+* [Why privacy is important and having nothing to hide is irrelevant](http://robindoherty.com/2016/01/06/nothing-to-hide.html)
 
 ### Humour
 

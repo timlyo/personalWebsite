@@ -2,11 +2,11 @@
 
 One of the key requirements for the website is that members can upload images to the website. This will enable users to easily see the activities that our group has been involved in, and will act as promotional material for the group.
 
-This presents x specific problems.
+This presents 4 key problem areas.
 
 * Upload experience must be fluid and simple
 * Finding past photos must be easy
-* Grouping photos into albums must be easy and intuitive
+* Grouping photos into albums must be simple and intuitive
 * Photos should be stored with as high quality, yet small file size as possible. Photos details should be editable and photos should be deletable after upload
 
 ## Upload 

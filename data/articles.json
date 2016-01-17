@@ -1,79 +1,88 @@
 {
   "_default": {
-    "1": {
-      "title": "Useful Links",
-      "url": "usefulLinks",
-      "markdown": "usefulLinks.md",
-      "outline": "A collection of useful links",
-      "date": "2015/5/8",
-      "tags": ["useful", "programming"],
-      "related": ["mathsForProgrammers"]
-    },
-    "2": {
-      "title": "Website Development Part 1 - The static pages",
-      "url": "websiteDevelopment1",
-      "markdown": "websiteDevelopment1.md",
-      "outline": "How this website was made",
-      "date": "2015/10/16",
-      "related": ["websiteDevelopment2"]
-    },
-    "3": {
-      "title": "Website Development Part 2 - Things get dynamic",
-      "url": "websiteDevelopment2",
-      "markdown": "websiteDevelopment2.md",
-      "outline": "How this website was made",
-      "date": "2015/10/17"
-    },
-    "4": {
-      "title": "Maths For Programmers",
-      "url": "mathsForProgrammers",
-      "markdown": "mathsForProgrammers.md",
-      "outline": "Maths, only logical",
-      "date": "2015/10/26",
-      "latex": true
-    },
-    "5": {
-      "title": "Sigma Notation - Maths For Programmers",
-      "url": "mathsForProgrammersSigmaNotation",
-      "markdown": "mathsForProgrammersSigmaNotation.md",
-      "outline": "Maths, only logical",
-      "date": "2015/10/26",
-      "related": ["mathsForProgrammers"],
-      "latex": true
-    },
-    "6": {
-      "title": "Camp Light",
-      "url": "campLight1",
-      "markdown": "campLight1.md",
-      "outline": "Making a lantern up to my standards",
-      "date": "2015/11/22",
-      "tags": ["electronics", "arduino"],
-      "related": ["campLight2"]
-    },
-    "7": {
-      "title": "Camp Light 2",
-      "url": "campLight2",
-      "markdown": "campLight2.md",
-      "outline": "Lightin' stuff",
-      "date": "2015/11/23",
-      "tags": ["electronics", "arduino"],
-      "related": ["campLight1"]
-    },
-    "8": {
-      "title": "Evergreen Scouts",
-      "url": "evergreenScouts",
-      "markdown": "evergreenScouts.md",
-      "outline": "Requirements for the evergreen scouts website",
-      "date": "2015/11/15",
-      "tags": ["website", "scouts"]
-    },
-    "9": {
-      "title": "Useful Prints",
-      "url": "usefulPrints",
-      "markdown": "usefulPrints.md",
-      "outline": "A collection of useful printed things",
-      "date": "2015/12/3",
-      "tags": ["3dprinting", "useful"]
-    }
+	"1": {
+	  "title": "Useful Links",
+	  "url": "usefulLinks",
+	  "markdown": "usefulLinks.md",
+	  "outline": "A collection of useful links",
+	  "date": "2015/5/8",
+	  "tags": ["useful", "programming"],
+	  "related": ["mathsForProgrammers"],
+	  "state": 1
+	},
+	"2": {
+	  "title": "Website Development Part 1 - The static pages",
+	  "url": "websiteDevelopment1",
+	  "markdown": "websiteDevelopment1.md",
+	  "outline": "How this website was made",
+	  "date": "2015/10/16",
+	  "related": ["websiteDevelopment2"],
+	  "state": 1
+	},
+	"3": {
+	  "title": "Website Development Part 2 - Things get dynamic",
+	  "url": "websiteDevelopment2",
+	  "markdown": "websiteDevelopment2.md",
+	  "outline": "How this website was made",
+	  "date": "2015/10/17",
+	  "state": 0
+	},
+	"4": {
+	  "title": "Maths For Programmers",
+	  "url": "mathsForProgrammers",
+	  "markdown": "mathsForProgrammers.md",
+	  "outline": "Maths, only logical",
+	  "date": "2015/10/26",
+	  "latex": true,
+	  "state": 0
+	},
+	"5": {
+	  "title": "Sigma Notation - Maths For Programmers",
+	  "url": "mathsForProgrammersSigmaNotation",
+	  "markdown": "mathsForProgrammersSigmaNotation.md",
+	  "outline": "Maths, only logical",
+	  "date": "2015/10/26",
+	  "related": ["mathsForProgrammers"],
+	  "latex": true,
+	  "state": 0
+	},
+	"6": {
+	  "title": "Camp Light",
+	  "url": "campLight1",
+	  "markdown": "campLight1.md",
+	  "outline": "Making a lantern up to my standards",
+	  "date": "2015/11/22",
+	  "tags": ["electronics", "arduino"],
+	  "related": ["campLight2"],
+	  "state": 1
+	},
+	"7": {
+	  "title": "Camp Light 2",
+	  "url": "campLight2",
+	  "markdown": "campLight2.md",
+	  "outline": "Lightin' stuff",
+	  "date": "2015/11/23",
+	  "tags": ["electronics", "arduino"],
+	  "related": ["campLight1"],
+	  "state": 0
+	},
+	"8": {
+	  "title": "Evergreen Scouts",
+	  "url": "evergreenScouts",
+	  "markdown": "evergreenScouts.md",
+	  "outline": "Requirements for the evergreen scouts website",
+	  "date": "2015/11/15",
+	  "tags": ["website", "scouts"],
+	  "state": 1
+	},
+	"9": {
+	  "title": "Useful Prints",
+	  "url": "usefulPrints",
+	  "markdown": "usefulPrints.md",
+	  "outline": "A collection of useful printed things",
+	  "date": "2015/12/3",
+	  "tags": ["3dprinting", "useful"],
+	  "state": 0
+	}
   }
 }

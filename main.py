@@ -1,6 +1,7 @@
 import argparse
+import os
 
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, send_from_directory
 
 from website import system
 from website import articles
@@ -50,7 +51,7 @@ def projects_page():
 
 @app.route("/articles")
 def articles_page():
-	recentArticles = reversed(articles.get_all_articles())
+	recentArticles = reversed(articles.get_published())
 	return render_template("articles.html", articles=recentArticles)
 
 
@@ -65,7 +66,7 @@ def getArticle(name):
 			related.append(articles.get_article_data_by_url(article))
 	except KeyError:
 		related = None
-		
+
 	print("Displaying {}".format(info))
 	return render_template("article.html", info=info, html=html, related=related)
 
@@ -73,6 +74,17 @@ def getArticle(name):
 @app.route("/search")
 def getSearchResults():
 	return jsonify
+
+
+@app.route("/woggles")
+def woggles():
+	return render_template("woggles.html")
+
+
+@app.route("/files/<path:path>")
+def serve_file(path):
+	print(app.static_folder)
+	return send_from_directory(app.static_folder, path)
 
 
 if __name__ == "__main__":

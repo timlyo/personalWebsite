@@ -5,7 +5,7 @@ from website import articles
 
 
 def tag_all_articles():
-    for article in articles.get_all_articles(False):
+    for article in articles.get_published():
         with open(article.path) as file:
             tags = article.tags.split(",")
             tags += get_article_tags(article.file.read())
