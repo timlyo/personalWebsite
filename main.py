@@ -103,7 +103,7 @@ def upload():
 			file.save(path)
 			return redirect("/woggles")
 		else:
-			return "File already exists", 418
+			return "File with that name already exists", 418
 
 
 if __name__ == "__main__":
