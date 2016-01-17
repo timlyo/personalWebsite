@@ -1,10 +1,13 @@
 import argparse
 import os
 
-from flask import Flask, render_template, jsonify, send_from_directory
+from flask import Flask, render_template, jsonify, send_from_directory, url_for, request
+from werkzeug.utils import secure_filename, redirect
 
 from website import system
 from website import articles
+
+from flask.ext.uploads import *
 
 app = Flask(__name__)
 
@@ -83,8 +86,18 @@ def woggles():
 
 @app.route("/files/<path:path>")
 def serve_file(path):
-	print(app.static_folder)
-	return send_from_directory(app.static_folder, path)
+	dir = os.path.join(os.getcwd(), "files")
+	print(dir)
+	return send_from_directory(dir, path)
+
+
+@app.route("/upload", methods=["POST"])
+def upload():
+	if request.method == "POST":
+		file = request.files["file"]
+		filename = secure_filename(file.filename)
+		file.save(os.path.join("files", filename))
+		return redirect("/woggles")
 
 
 if __name__ == "__main__":

@@ -1,26 +1,48 @@
 {% extends "partials/layout.html" %}
+
+{% block headerAdditionals %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/min/dropzone.min.css"/>
+{% endblock  %}
+
 {% block body %}
 <div class="container">
     <div class="col-md-10 card">
         <h1>Woggles</h1>
 
         <or>
-            <li>Download and install sketchup. <a href="http://www.sketchup.com/download/sketchup-make/windows/thank-you">Windows</a>, <a href="http://www.sketchup.com/download/sketchup-make/mac/thank-you">Mac</a></li>
+            <li>Download and install sketchup. <a
+                    href="http://www.sketchup.com/download/sketchup-make/windows/thank-you">Windows</a>, <a
+                    href="http://www.sketchup.com/download/sketchup-make/mac/thank-you">Mac</a></li>
             <li>Choose a setting that uses mm</li>
             <li>Download a file below</li>
         </or>
     </div>
 
     <div class="col-md-3 card">
-        <h3>Hexagonal</h3>
+        <a href="/files/hexagonal.skp">
+            <h3>Hexagonal</h3>
+        </a>
     </div>
 
     <div class="col-md-3 card">
-        <h3>Square</h3>
+        <a href="/files/square.skp">
+            <h3>Square</h3>
+        </a>
     </div>
 
     <div class="col-md-3 card">
-        <h3>Circular</h3>
+        <a href="/files/cylinder.skp">
+            <h3>Cylinder</h3>
+        </a>
+    </div>
+
+    <div class="col-md-12 card">
+        <form action="/upload" method="post" enctype="multipart/form-data" class="dropzone">
+            <div class="fallback">
+                <p>Error, loading upload form.</p>
+            </div>
+        </form>
     </div>
 </div>
 {% endblock %}
