@@ -100,7 +100,7 @@ def upload():
 		path = os.path.join("files", filename)
 		if not os.path.isfile(path):
 			print(path, "doesn't exist")
-			file.save()
+			file.save(path)
 			return redirect("/woggles")
 		else:
 			return "File already exists", 418
