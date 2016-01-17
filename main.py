@@ -1,6 +1,7 @@
 import argparse
 import os
 
+import flask
 from flask import Flask, render_template, jsonify, send_from_directory, url_for, request
 from werkzeug.utils import secure_filename, redirect
 
@@ -96,8 +97,13 @@ def upload():
 	if request.method == "POST":
 		file = request.files["file"]
 		filename = secure_filename(file.filename)
-		file.save(os.path.join("files", filename))
-		return redirect("/woggles")
+		path = os.path.join("files", filename)
+		if not os.path.isfile(path):
+			print(path, "doesn't exist")
+			file.save()
+			return redirect("/woggles")
+		else:
+			return "File already exists", 418
 
 
 if __name__ == "__main__":
