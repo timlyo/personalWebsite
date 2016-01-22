@@ -16,6 +16,7 @@ A collection of links that I've found useful over the years
 * [Error handling in rust](http://blog.burntsushi.net/rust-error-handling/)
 * [Visual machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)
 * [Neural networks and deep learning](http://neuralnetworksanddeeplearning.com/)
+* [The worst mistake of computer science](https://www.lucidchart.com/techblog/2015/08/31/the-worst-mistake-of-computer-science/)
 
 ### Other stuff
 

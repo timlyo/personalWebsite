@@ -67,8 +67,14 @@ def getArticle(name):
 	related = []
 	try:
 		for article in info["related"]:
-			related.append(articles.get_article_data_by_url(article))
+			try:
+				related.append(articles.get_article_data_by_url(article))
+			except FileNotFoundError:
+				pass
 	except KeyError:
+		pass
+
+	if len(related) == 0:
 		related = None
 
 	print("Displaying {}".format(info))

@@ -25,7 +25,7 @@
         {{ html | safe }}
     </div>
 
-    {% if info["related"] %}
+    {% if related %}
         <div class="article card col-md-3 col-md-offset-1" id="sideBar">
             <h3>Related Articles</h3>
             {% for article in related %}
