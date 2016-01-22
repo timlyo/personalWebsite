@@ -5,10 +5,11 @@ For better or for worse, I have agreed to create a website for my local scout gr
 * It is easier for people to discover the group
 * It is easier for existing members to find out information e.g. program
 
-This document is written to be a non technical overview of the requirements of the site. If there is anything that is unclear or not understood, feel free to contact me.
+This document is intended to be a non technical overview of the requirements of the site. If there is anything that is unclear or not understood, feel free to contact me.
 
 # Definitions
 
+| Term | Definition |
 | -- | -- |
 | Evergreens | The scout group that the website belongs to |
 | Unit | Individual unit such as Scouts, Beavers |
@@ -23,7 +24,7 @@ This document is written to be a non technical overview of the requirements of t
 | News | Collective term for all articles |
 | Image | A single image file and metadata |
 | Gallery | Aspect of the website that displays images |
-| Album | Collection of images grouped by a user |
+| Album | Collection of images |
 | Website | The package that is presented to a user |
 | Program | The week by week schedule of a unit's activities |
 

@@ -32,14 +32,17 @@ def get_article_html(url: str):
 	info = get_article_data_by_url(url)
 	html = None
 	if "html" in info:
-		html = get_contents(info["html"])
+		html = get_file_content(info["html"])
 	elif "markdown" in info:
-		markdown = get_contents(info["markdown"])
+		markdown = get_file_content(info["markdown"])
 		html = markdown2.markdown(markdown, extras=MARKDOWN_EXTRAS)
+
+	# Hack for proper bootstrap table rendering
+	html = html.replace("<table>", "<table class=\"table\"")
 	return html
 
 
-def get_contents(filename: str):
+def get_file_content(filename: str):
 	contents = None
 	with open("data/articles/" + filename, "r", encoding="utf8") as file:
 		contents = file.read()
