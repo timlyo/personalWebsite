@@ -6,8 +6,8 @@
 {% endblock  %}
 
 {% block body %}
-<div class="container">
-    <div class="col-md-10 card">
+<div class="ui container">
+    <div class="ui segment">
         <ol>
             <li>Download and install sketchup.
                 <ul>
@@ -21,29 +21,33 @@
             <li>Upload below</li>
         </ol>
 
-        <br>
 
         <h2>Choose one of these templates</h2>
-        <div class="col-md-3">
-            <a href="/files/hexagonal.skp">
-                <h3>Hexagonal</h3>
-            </a>
-        </div>
+        <div class="ui three column grid">
+            <div class="column">
+                <a href="/files/hexagonal.skp">
+                    <h3>Hexagonal</h3>
+                    <img src="/static/img/hexagonal.png" class="ui small image">
+                </a>
+            </div>
 
-        <div class="col-md-3">
-            <a href="/files/square.skp">
-                <h3>Square</h3>
-            </a>
-        </div>
+            <div class="column">
+                <a href="/files/square.skp">
+                    <h3>Cube</h3>
+                    <img src="/static/img/cube.png" class="ui small image">
+                </a>
+            </div>
 
-        <div class="col-md-3">
-            <a href="/files/cylinder.skp">
-                <h3>Cylinder</h3>
-            </a>
+            <div class="column">
+                <a href="/files/cylinder.skp">
+                    <h3>Cylinder</h3>
+                    <img src="/static/img/Cylinder.png" class="ui small image">
+                </a>
+            </div>
         </div>
     </div>
 
-    <div class="col-md-12 card">
+    <div class="ui segment">
         <h2>Upload here when you're done</h2>
         <form action="/upload" method="post" enctype="multipart/form-data" class="dropzone">
             <div class="fallback">

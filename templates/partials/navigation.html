@@ -1,36 +1,8 @@
-<nav class='navbar navbar-inverse navbar-fixed-top'>
-    <div class='container'>
-        <div class='navbar-header'>
-            <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
-                <span class='sr-only'>Toggle navigation</span>
-                <span class='icon-bar'></span>
-                <span class='icon-bar'></span>
-                <span class='icon-bar'></span>
-            </button>
-            <a class='navbar-brand' href='/'>timlyo</a>
-        </div>
-
-        <div class='collapse navbar-collapse' id='navbar'>
-            <ul class='nav navbar-nav'>
-                <li>
-                    <a href='/projects'>Projects</a>
-                </li>
-                <li>
-                    <a href='/articles'>Articles</a>
-                </li>
-                <li>
-                    <a href='/contact'>Contact</a>
-                </li>
-            </ul>
-
-            <!--<div id='search'>-->
-            <!--<label for='text'>Search</label>-->
-            <!--<input autocomplete='off' autofocus id='searchBox' type='text'>-->
-            <!--<ul id='searchResults'></ul>-->
-            <!--</div>-->
-
-        </div>
-    </div>
+<nav class='ui stackable menu'>
+    <a href='/' class="item">Home</a>
+    <a href='/projects' class="item">Projects</a>
+    <a href='/articles' class="item">Articles</a>
+    <a href='/contact'  class="item">Contact</a>
 </nav>
-<script src='{{url_for("static", filename="javascript/pageList.js")}}'></script>
-<script src='{{url_for("static", filename="javascript/search.js")}}'></script>
+<!--<script src='{{url_for("static", filename="javascript/pageList.js")}}'></script>-->
+<!--<script src='{{url_for("static", filename="javascript/search.js")}}'></script>-->

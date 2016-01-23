@@ -1,37 +1,42 @@
 {% extends "partials/layout.html" %}
 
 {% block headerAdditionals %}
-    <link href='{{url_for("static", filename="css/articleStyle.css")}}' rel='stylesheet' type='text/css'>
-    <link href='{{url_for("static", filename="css/codeStyle.css")}}' rel='stylesheet' type='text/css'>
+<link href='{{url_for("static", filename="css/articleStyle.css")}}' rel='stylesheet' type='text/css'>
+<link href='{{url_for("static", filename="css/codeStyle.css")}}' rel='stylesheet' type='text/css'>
 
-    {% if info["latex"] %}
-        <script type="text/javascript" async
-                src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-        </script>
+{% if info["latex"] %}
+<script type="text/javascript" async
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
-        <script type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
             MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-        </script>
-    {% endif %}
+
+</script>
+{% endif %}
 {% endblock %}
 
 {% block title %}
-    <title>{{ info.title }}</title>
+<title>{{ info.title }}</title>
 {% endblock %}
 
 {% block body %}
-<div class='container'>
-    <div class="article card col-md-8">
-        {{ html | safe }}
+<div class='ui centered padded grid'>
+    <div class="ten wide column">
+        <div class="ui very padded segment">
+            {{ html | safe }}
+        </div>
     </div>
 
     {% if related %}
-        <div class="article card col-md-3 col-md-offset-1" id="sideBar">
+    <div class="four wide column">
+        <div class="ui segment">
             <h3>Related Articles</h3>
             {% for article in related %}
-                 <a href="{{article.url}}">{{article.title}}</a>
+            <a href="{{article.url}}">{{article.title}}</a>
             {% endfor %}
         </div>
+    </div>
     {% endif %}
 </div>
 {% endblock %}

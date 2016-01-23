@@ -73,7 +73,8 @@
 	  "outline": "Requirements for the evergreen scouts website",
 	  "date": "2015/11/15",
 	  "tags": ["website", "scouts"],
-	  "state": 1
+	  "state": 1,
+	  "related": ["usefulLinks"]
 	},
 	"9": {
 	  "title": "Useful Prints",
