@@ -52,7 +52,6 @@ def stats_page():
 def projects_page():
 	projects = [
 		{"title": "Useful Links", "url": "/articles/usefulLinks", "img": "static/img/tux.png", "text": "Collection of useful articles"},
-		{"title": "Maths for Programmers", "url": "/articles/mathsForProgrammers", "img": "static/img/sigma.png", "text": "Maths, but logical"},
 		{"title": "Website Development", "url": "/articles/websiteDevelopment1", "img": "static/img/html-tag.png", "text": "The history of this website"}
 	]
 	return render_template("projects.html", projects=projects)

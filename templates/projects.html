@@ -1,15 +1,21 @@
 {% extends "partials/layout.html" %}
 {% block body %}
-<div class='ui three column doubling grid container'>
+<div class='ui container'>
+    <div class="ui segment relaxed divided items">
+        {% for project in projects %}
 
-
-    {% for project in projects %}
-    <div class="ui column segment">
-            <a class="header" href='{{project["url"]}}'>{{project["title"]}}</a>
-            <img src='{{project["img"]}}' class="ui small centered image">
-
-            <p>{{project["text"]}}</p>
+        <div class="item ">
+            <div class="image">
+                <a class="header" href='{{project["url"]}}'>
+                    <img src='{{project["img"]}}' class="ui small image">
+                </a>
+            </div>
+            <div class="content">
+                <a class="header" href='{{project["url"]}}'>{{project["title"]}}</a>
+                <p>{{project["text"]}}</p>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}
