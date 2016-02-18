@@ -9,9 +9,9 @@
 general {
         colors = yes
         interval = 1
-	color_good = "#2ECC71"
+        color_good = "#2ECC71"
         color_bad = "#E74C3C"
-#	color_degraded = " "
+        #color_degraded = " "
 	}
 
 order += "cpu_usage"
